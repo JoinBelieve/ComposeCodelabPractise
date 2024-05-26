@@ -33,6 +33,7 @@ fun bindImageFromUrl(view: ImageView, imageUrl: String?) {
         Glide.with(view.context)
             .load(imageUrl)
             .transition(DrawableTransitionOptions.withCrossFade())
+            .error(R.drawable.ic_my_garden_inactive)
             .into(view)
     }
 }
